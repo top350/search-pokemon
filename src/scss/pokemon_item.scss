@@ -1,0 +1,21 @@
+
+.item-grid{
+    
+    display: grid;
+    grid-template-columns: auto  ;
+    grid-column-gap: 20px;
+   .not-found{
+       margin: 50px;
+       font-size: 20px;
+   }
+    
+}
+.search-wrap{
+    
+    display: flex;
+    padding:10px 50px;
+    .search-bar{
+        width: 500px;
+        margin-right: 5px;
+    }
+}
