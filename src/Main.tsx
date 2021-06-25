@@ -15,9 +15,10 @@ export  const MainPage : React.FC<IMain>=(props)=>{
     return(
         <Container>
             <Header/>
+        
             <PokemonItem/>
        
-            {/* {console.log(pokemon.name)} */}
+
         </Container>
     )
 }

@@ -1,23 +1,28 @@
 import React,{ useEffect, useState } from 'react'
 import { GET_POKEMONS, GET_POKEMONS_NAME } from '../graphql/get-pokemon'
-import { useQuery } from 'react-apollo'
+import {  useQuery } from 'react-apollo'
 import { PokemonCard } from './PokemonCard'
 import { Form  } from "react-bootstrap";
-
 import '../scss/pokemon_item.scss'
+
+
+
+
 
 export const PokemonItem:React.FC =(props)=>{
     const [input, setInput] = useState<string>('')
     const [loading, setLoading] = useState<boolean>(false)
     const {data:{pokemons=[]}={}} =useQuery(GET_POKEMONS,{variables:{first:151}})
     const {data:{pokemon={}}={}} =useQuery(GET_POKEMONS_NAME,{variables:{name:input}})
-      
-   
+  
+
 const formOnchange= (e:React.ChangeEvent<HTMLInputElement>)=>{
     
  setInput(e.target.value)
 
 }
+
+
 
 useEffect(() => {
   
@@ -59,7 +64,7 @@ return(
 
 
     <div>
-        <p className="test">Hello</p>
+       
       <Form >
           <div className="search-wrap"> 
             <Form.Group  controlId="formBasicName">
